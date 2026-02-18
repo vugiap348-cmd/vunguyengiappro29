@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Đề Kiểm Tra Số 27 – Lịch Sử</title>
+<title>Đề Kiểm Tra Số 28 – Lịch Sử</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -14,7 +14,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Source Serif 4',Georgia,serif;background:var(--paper);color:var(--ink);min-height:100vh}
 
-/* ── HEADER ── */
 header{
   background:var(--dark);color:var(--gold);text-align:center;
   padding:26px 20px 18px;border-bottom:4px solid var(--gold);
@@ -23,63 +22,37 @@ header{
 header h1{font-family:'Playfair Display',serif;font-size:1.55rem;letter-spacing:2px;text-transform:uppercase}
 header p{font-size:.86rem;color:#c9a96e;margin-top:4px}
 
-/* ── TIMER BAR ── */
 #timer-bar{
   display:flex;align-items:center;justify-content:space-between;
   background:#231800;padding:10px 24px;
   position:sticky;top:88px;z-index:99;border-bottom:2px solid var(--gold);
 }
 #timer-wrap{display:flex;align-items:center;gap:12px}
-#timer-display{
-  font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);
-  letter-spacing:4px;min-width:96px;transition:color .3s;
-}
+#timer-display{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);letter-spacing:4px;min-width:96px;transition:color .3s}
 #timer-display.urgent{color:#e74c3c;animation:pulse 1s infinite}
 #timer-label{color:#c9a96e;font-size:.78rem;letter-spacing:1px;text-transform:uppercase}
 #progress-text{color:#c9a96e;font-size:.82rem}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 
-/* ── MAIN ── */
 main{max-width:920px;margin:0 auto;padding:28px 18px 80px}
-.section-title{
-  font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--red);
-  border-bottom:2px solid var(--gold);padding-bottom:8px;margin:36px 0 20px;letter-spacing:1px;
-}
-.section-note{
-  background:#fff8e7;border-left:4px solid var(--gold);padding:10px 16px;
-  font-size:.84rem;color:var(--muted);margin-bottom:18px;border-radius:0 6px 6px 0;
-}
+.section-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--red);border-bottom:2px solid var(--gold);padding-bottom:8px;margin:36px 0 20px;letter-spacing:1px}
+.section-note{background:#fff8e7;border-left:4px solid var(--gold);padding:10px 16px;font-size:.84rem;color:var(--muted);margin-bottom:18px;border-radius:0 6px 6px 0}
 
-/* ── QUESTION CARD ── */
-.q-card{
-  background:#fff;border:1.5px solid var(--border);border-radius:10px;
-  margin-bottom:22px;padding:20px 22px 16px;
-  box-shadow:0 2px 10px var(--shadow);transition:border-color .2s;
-}
+.q-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;margin-bottom:22px;padding:20px 22px 16px;box-shadow:0 2px 10px var(--shadow);transition:border-color .2s}
 .q-card.answered{border-color:var(--gold)}
 .q-num{font-family:'Playfair Display',serif;font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
 .q-text{font-size:.97rem;line-height:1.72;color:var(--ink);margin-bottom:14px;font-weight:600}
-.q-text blockquote{
-  font-style:italic;background:#fdf6e3;border-left:3px solid var(--gold);
-  padding:12px 16px;margin:9px 0 10px;font-weight:400;font-size:.92rem;
-  line-height:1.82;color:#4a3322;border-radius:0 6px 6px 0;white-space:pre-line;
-}
+.q-text blockquote{font-style:italic;background:#fdf6e3;border-left:3px solid var(--gold);padding:12px 16px;margin:9px 0 10px;font-weight:400;font-size:.92rem;line-height:1.82;color:#4a3322;border-radius:0 6px 6px 0;white-space:pre-line}
 .source-note{display:block;font-size:.79rem;color:var(--muted);font-style:italic;margin-top:6px;font-weight:400}
 
-/* ── OPTIONS ── */
 .options{display:flex;flex-direction:column;gap:8px}
-.opt{
-  display:flex;align-items:flex-start;gap:10px;padding:10px 14px;
-  border:1.5px solid var(--border);border-radius:7px;cursor:pointer;
-  transition:all .18s;background:var(--paper);font-size:.93rem;line-height:1.56;
-}
+.opt{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border:1.5px solid var(--border);border-radius:7px;cursor:pointer;transition:all .18s;background:var(--paper);font-size:.93rem;line-height:1.56}
 .opt:hover{border-color:var(--gold);background:#fffbf0}
 .opt input[type=radio]{margin-top:3px;accent-color:var(--gold);flex-shrink:0}
 .opt.selected{border-color:var(--blue);background:#eef6ff}
 .opt.correct{border-color:var(--green)!important;background:var(--correct-bg)!important;font-weight:600}
 .opt.wrong{border-color:var(--red)!important;background:var(--wrong-bg)!important}
 
-/* ── TRUE/FALSE ── */
 .tf-table{width:100%;border-collapse:collapse;margin-top:6px}
 .tf-table th{background:var(--dark);color:var(--gold);font-family:'Playfair Display',serif;font-size:.78rem;padding:8px 12px;text-align:center;letter-spacing:.5px}
 .tf-table td{border:1px solid var(--border);padding:10px 12px;font-size:.91rem;vertical-align:top;line-height:1.62}
@@ -92,74 +65,41 @@ main{max-width:920px;margin:0 auto;padding:28px 18px 80px}
 .tf-btn.cr{background:var(--correct-bg)!important;border-color:var(--green)!important;color:var(--green)!important;font-weight:700}
 .tf-btn.wr{background:var(--wrong-bg)!important;border-color:var(--red)!important;color:var(--red)!important}
 
-/* ── SUBMIT ── */
-#submit-btn{
-  display:block;margin:38px auto 0;padding:15px 56px;
-  background:linear-gradient(135deg,var(--red),#a93226);color:#fff;border:none;
-  border-radius:8px;font-family:'Playfair Display',serif;font-size:1.1rem;letter-spacing:1px;
-  cursor:pointer;box-shadow:0 4px 18px rgba(192,57,43,.35);transition:all .2s;
-}
+#submit-btn{display:block;margin:38px auto 0;padding:15px 56px;background:linear-gradient(135deg,var(--red),#a93226);color:#fff;border:none;border-radius:8px;font-family:'Playfair Display',serif;font-size:1.1rem;letter-spacing:1px;cursor:pointer;box-shadow:0 4px 18px rgba(192,57,43,.35);transition:all .2s}
 #submit-btn:hover{transform:translateY(-2px);box-shadow:0 7px 24px rgba(192,57,43,.45)}
 #submit-btn:disabled{background:var(--muted);cursor:default;transform:none;box-shadow:none}
 
-/* ── REVIEW MARKS ── */
 .review-mark{display:none;margin-top:10px;padding:7px 12px;border-radius:6px;font-size:.83rem;font-weight:600}
 .review-mark.ok{background:var(--correct-bg);color:var(--green);display:block;border:1px solid var(--green)}
 .review-mark.no{background:var(--wrong-bg);color:var(--red);display:block;border:1px solid var(--red)}
 .review-mark.pt{background:#fff8e7;color:#b7860b;display:block;border:1px solid var(--gold)}
 
-/* ════════════════════════════════
-   MODAL OVERLAY
-════════════════════════════════ */
-#modal-overlay{
-  display:none;position:fixed;inset:0;z-index:9999;
-  background:rgba(10,6,2,.78);backdrop-filter:blur(7px);
-  align-items:center;justify-content:center;padding:20px;
-}
+/* ── MODAL ── */
+#modal-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(10,6,2,.78);backdrop-filter:blur(7px);align-items:center;justify-content:center;padding:20px}
 #modal-overlay.show{display:flex}
 
-/* ── CONFIRM ── */
-#modal-confirm{
-  background:#fff;border-radius:18px;max-width:460px;width:100%;
-  box-shadow:0 28px 70px rgba(0,0,0,.38);overflow:hidden;
-  transform:scale(.9) translateY(20px);opacity:0;
-  transition:all .35s cubic-bezier(.34,1.56,.64,1);
-}
+#modal-confirm{background:#fff;border-radius:18px;max-width:460px;width:100%;box-shadow:0 28px 70px rgba(0,0,0,.38);overflow:hidden;transform:scale(.9) translateY(20px);opacity:0;transition:all .35s cubic-bezier(.34,1.56,.64,1)}
 #modal-confirm.pop{transform:scale(1) translateY(0);opacity:1}
-
 .mh{background:var(--dark);padding:22px 28px 18px;text-align:center;border-bottom:3px solid var(--gold)}
 .mh h2{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.28rem;letter-spacing:1px}
 .mh p{color:#c9a96e;font-size:.82rem;margin-top:4px}
 .mb{padding:22px 26px 20px}
-
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:18px}
 .stat-box{background:#fdf6e3;border:1.5px solid var(--border);border-radius:10px;padding:12px 14px;text-align:center}
 .stat-box .sv{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--ink);font-weight:700}
 .stat-box .sl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
 .stat-box.warn .sv{color:var(--red)}
-
 .warnbox{background:#fff8e7;border:1.5px solid var(--gold);border-radius:8px;padding:9px 14px;font-size:.83rem;color:#7a5c00;text-align:center;margin-bottom:14px;display:none}
 .warnbox.show{display:block}
-
 .mbtns{display:flex;gap:11px}
 .btn-back{flex:1;padding:12px;border:2px solid var(--border);border-radius:8px;background:var(--paper);color:var(--ink);font-family:'Source Serif 4',serif;font-size:.92rem;cursor:pointer;transition:all .18s}
 .btn-back:hover{border-color:var(--muted);background:#f5efe0}
 .btn-go{flex:1;padding:12px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--red),#a93226);color:#fff;font-family:'Playfair Display',serif;font-size:.95rem;letter-spacing:.5px;cursor:pointer;transition:all .18s;box-shadow:0 3px 12px rgba(192,57,43,.3)}
 .btn-go:hover{transform:translateY(-1px);box-shadow:0 5px 18px rgba(192,57,43,.4)}
 
-/* ── RESULT ── */
-#modal-result{
-  background:#fff;border-radius:20px;max-width:580px;width:100%;
-  box-shadow:0 30px 80px rgba(0,0,0,.42);overflow:hidden;
-  transform:scale(.88) translateY(40px);opacity:0;
-  transition:all .45s cubic-bezier(.34,1.56,.64,1);display:none;
-}
+#modal-result{background:#fff;border-radius:20px;max-width:580px;width:100%;box-shadow:0 30px 80px rgba(0,0,0,.42);overflow:hidden;transform:scale(.88) translateY(40px);opacity:0;transition:all .45s cubic-bezier(.34,1.56,.64,1);display:none}
 #modal-result.pop{transform:scale(1) translateY(0);opacity:1}
-
-.rhero{
-  background:linear-gradient(140deg,#1a1208 0%,#2c1a0e 55%,#3d2510 100%);
-  padding:38px 28px 30px;text-align:center;position:relative;overflow:hidden;
-}
+.rhero{background:linear-gradient(140deg,#1a1208 0%,#2c1a0e 55%,#3d2510 100%);padding:38px 28px 30px;text-align:center;position:relative;overflow:hidden}
 .rhero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(212,160,23,.14) 0%,transparent 58%)}
 .rhero .trophy{font-size:2.8rem;display:block;margin-bottom:8px}
 .rhero h2{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.5rem;position:relative}
@@ -170,38 +110,28 @@ main{max-width:920px;margin:0 auto;padding:28px 18px 80px}
 .g-kh{background:rgba(41,128,185,.25);color:#7ec8f0;border:1px solid rgba(41,128,185,.4)}
 .g-tb{background:rgba(212,160,23,.2);color:#f0d070;border:1px solid rgba(212,160,23,.35)}
 .g-ye{background:rgba(192,57,43,.25);color:#f0907a;border:1px solid rgba(192,57,43,.35)}
-
 .rbody{padding:24px 28px 26px}
 .sctbl{width:100%;border-collapse:collapse;margin-bottom:22px}
 .sctbl th{background:var(--dark);color:var(--gold);font-family:'Playfair Display',serif;font-size:.78rem;padding:9px 14px;text-align:left;letter-spacing:.5px}
 .sctbl td{border:1px solid var(--border);padding:9px 14px;font-size:.9rem}
 .sctbl tr:last-child td{font-weight:700;background:#fdf6e3}
-
 .rbtns{display:flex;gap:11px}
 .btn-see{flex:1;padding:13px;border:2px solid var(--border);border-radius:9px;background:var(--paper);color:var(--ink);font-family:'Source Serif 4',serif;font-size:.92rem;cursor:pointer;transition:all .18s}
 .btn-see:hover{border-color:var(--gold);background:#fffbf0}
 .btn-redo{flex:1;padding:13px;border:1.5px solid var(--gold);border-radius:9px;background:linear-gradient(135deg,var(--dark),#3d2510);color:var(--gold);font-family:'Playfair Display',serif;font-size:.95rem;letter-spacing:.5px;cursor:pointer;transition:all .2s;box-shadow:0 3px 14px rgba(26,18,8,.3)}
 .btn-redo:hover{background:linear-gradient(135deg,#2c1a0e,#523020);transform:translateY(-1px)}
 
-/* ── CONFETTI ── */
 .cf{position:fixed;border-radius:2px;animation:fall 2.2s ease-in forwards;pointer-events:none;z-index:10000}
 @keyframes fall{0%{transform:translateY(-20px) rotate(0);opacity:1}100%{transform:translateY(105vh) rotate(720deg);opacity:0}}
 
-@media(max-width:600px){
-  header h1{font-size:1.1rem}
-  #timer-display{font-size:1.5rem}
-  .rscore{font-size:3rem}
-  .stat-grid{grid-template-columns:1fr 1fr}
-}
+@media(max-width:600px){header h1{font-size:1.1rem}#timer-display{font-size:1.5rem}.rscore{font-size:3rem}}
 </style>
 </head>
 <body>
-
 <header>
-  <h1>📜 Đề Kiểm Tra Số 27 — Lịch Sử</h1>
+  <h1>📜 Đề Kiểm Tra Số 28 — Lịch Sử</h1>
   <p>Trắc nghiệm một lựa chọn &amp; Đúng / Sai · Thời gian: 45 phút</p>
 </header>
-
 <div id="timer-bar">
   <div id="timer-wrap">
     <div>
@@ -211,22 +141,17 @@ main{max-width:920px;margin:0 auto;padding:28px 18px 80px}
   </div>
   <span id="progress-text">0 / 40 ý đã làm</span>
 </div>
-
 <main>
   <div class="section-title">PHẦN I — Trắc nghiệm một lựa chọn (24 câu × 0.25 điểm)</div>
   <div class="section-note">Mỗi câu chỉ chọn <strong>một</strong> phương án đúng nhất.</div>
   <div id="p1"></div>
-
   <div class="section-title">PHẦN II — Đúng / Sai (4 câu × 1.0 điểm)</div>
   <div class="section-note">Mỗi ý a, b, c, d chọn <strong>Đúng</strong> hoặc <strong>Sai</strong>. Thang điểm: 1 ý = 0.1đ · 2 ý = 0.25đ · 3 ý = 0.5đ · 4 ý = 1.0đ</div>
   <div id="p2"></div>
-
   <button id="submit-btn" onclick="openConfirm()">📩 NỘP BÀI</button>
 </main>
 
-<!-- MODAL OVERLAY -->
 <div id="modal-overlay">
-  <!-- confirm -->
   <div id="modal-confirm">
     <div class="mh"><h2>📋 Xác nhận nộp bài</h2><p>Kiểm tra lại trước khi nộp</p></div>
     <div class="mb">
@@ -243,7 +168,6 @@ main{max-width:920px;margin:0 auto;padding:28px 18px 80px}
       </div>
     </div>
   </div>
-  <!-- result -->
   <div id="modal-result">
     <div class="rhero">
       <span class="trophy">🏆</span>
@@ -258,7 +182,7 @@ main{max-width:920px;margin:0 auto;padding:28px 18px 80px}
         <tbody id="sc-tbody"></tbody>
       </table>
       <div class="rbtns">
-        <button class="btn-see" onclick="seeReview()">🔍 Xem đáp án</button>
+        <button class="btn-see" onclick="closeModal()">🔍 Xem đáp án</button>
         <button class="btn-redo" onclick="redoQuiz()">🔄 Làm lại bài</button>
       </div>
     </div>
@@ -266,118 +190,103 @@ main{max-width:920px;margin:0 auto;padding:28px 18px 80px}
 </div>
 
 <script>
-/* ══════════════════════════════════════
-   DATA
-══════════════════════════════════════ */
-const P1_DATA = [
-  {id:'q1', text:'Nội dung nào sau đây phản ánh đúng tác dụng của chính sách quân điền đối với sự phát triển của kinh tế Đại Việt thời Lê Thánh Tông?', opts:['Thúc đẩy sự phát triển của thương mại.','Thủ công nghiệp phát triển nhanh chóng.','Thúc đẩy kinh tế nông nghiệp phát triển.','Thăng Long trở thành trung tâm kinh tế.'], answer:2},
-  {id:'q2', text:'Nội dung nào sau đây là đúng với mục đích của vua Lê Thánh Tông khi tổ chức tuyển chọn quan lại bằng hình thức khoa cử?', opts:['Tuyển chọn nguồn quan lại có tài năng, đạo đức.','Ngăn chặn sự cát cứ của các thế lực địa phương.','Khống chế sự phát triển của giáo dục Nho học.','Tập trung quyền lực tối cao vào tay hoàng đế.'], answer:0},
-  {id:'q3', text:'Nội dung nào sau đây phản ánh đúng về quá trình xác lập, thực thi chủ quyền biển đảo của Việt Nam từ thế kỷ XVI đến nay?', opts:['Quá trình diễn ra sớm, liên tục và có cơ sở pháp lý vững chắc.','Quá trình diễn ra sớm, bị gián đoạn và không có cơ sở pháp lý.','Việt Nam chiếm giữ hoàn toàn và đã thực thi chủ quyền lâu dài.','Việt Nam không có chủ quyền với hai quần đảo trên biển Đông.'], answer:0},
-  {id:'q4', text:'Trong việc giải quyết các vấn đề liên quan đến tranh chấp chủ quyền ở biển Đông giữa Việt Nam và các quốc gia xung quanh, Việt Nam luôn kiên trì nguyên tắc nào sau đây?', opts:['Sử dụng biện pháp hòa bình trên cơ sở luật pháp quốc tế.','Kiên trì, kiên quyết đàm phán, sẵn sàng sử dụng vũ lực.','Kêu gọi các bên liên quan tiến hành đàm phán riêng rẽ.','Không nhân nhượng, sẵn sàng khởi kiện ra tòa quốc tế.'], answer:0},
-  {id:'q5', text:'Xu thế phát triển chính của thế giới sau Chiến tranh lạnh và là hệ quả của cuộc cách mạng khoa học – công nghệ là gì?', opts:['Xu thế đa cực.','Xu thế Toàn cầu hóa.','Xu thế đối thoại, thỏa hiệp.','Lấy kinh tế làm trung tâm.'], answer:1},
-  {id:'q6', text:'Nội dung nào sau đây phản ánh đúng một trong những hạn chế của Liên Hợp quốc từ năm 1945 đến nay?', opts:['Chưa xóa bỏ được mâu thuẫn hai cực.','Chưa tiêu diệt được chủ nghĩa khủng bố.','Bị một số nước lớn chi phối, thao túng.','Không mở rộng được thêm thành viên.'], answer:2},
-  {id:'q7', text:'Nội dung nào sau đây phản ánh đúng ý nghĩa tích cực của việc mở rộng ASEAN từ 5 lên 10 thành viên?', opts:['Thúc đẩy xu thế toàn cầu hóa ở khu vực.','Nâng cao sự tin tưởng và hợp tác khu vực.','Giảm tác động tiêu cực của toàn cầu hóa.','Ngăn chặn âm mưu nô dịch của phương Tây.'], answer:1},
-  {id:'q8', text:'Việt Nam gia nhập tổ chức ASEAN trong bối cảnh nào sau đây?', opts:['Các nước lớn đang tiến hành can thiệp vũ trang vào khu vực.','Các nước Đông Nam Á đã hoàn thành công nghiệp hóa đất nước.','Chủ nghĩa phát xít đang đe dọa đến nền hòa bình của thế giới.','Mâu thuẫn giữa Việt Nam và một số nước đang được tháo gỡ.'], answer:3},
-  {id:'q9', text:'Trận Vị Xuyên (Hà Giang) là cuộc chiến đấu bảo vệ Tổ quốc của nhân dân Việt Nam ở vùng biên giới', opts:['phía Bắc.','Tây Nam.','Đông Bắc.','Đông Nam.'], answer:0},
-  {id:'q10', text:'Sự kiện nào sau đây được Đảng Cộng sản Đông Dương xác định là thời cơ của cách mạng tháng Tám 1945?', opts:['Mỹ phát động cuộc Chiến tranh lạnh.','Phát xít Đức tấn công xâm lược Liên Xô.','Chiến tranh thế giới thứ hai bùng nổ.','Chính phủ thân Nhật hoang mang rệu rã.'], answer:3},
-  {id:'q11', text:'Nội dung nào sau đây là điểm chung trong các chiến dịch tiến công của quân và dân Việt Nam trong kháng chiến chống thực dân Pháp (1945-1954)?', opts:['Có chung mục tiêu là tiêu diệt toàn bộ quân Pháp xâm lược.','Có sự phối hợp giữa chiến trường chính và vùng sau lưng địch.','Chấm dứt sự bóc lột của giai cấp địa chủ ở các vùng giải phóng.','Giành thắng lợi quân sự để tạo thế và lực trên bàn đàm phán.'], answer:1},
-  {id:'q12', text:'Nội dung nào sau đây là thành quả lớn nhất của Cách mạng tháng Tám năm 1945 ở Việt Nam?', opts:['Cử ra Ủy ban Dân tộc giải phóng Việt Nam.','Thành lập Mặt trận Việt Minh.','Đưa cả nước đi lên chủ nghĩa xã hội.','Nước Việt Nam Dân chủ Cộng hòa ra đời.'], answer:3},
-  {id:'q13', text:'Trong đường lối Đổi mới đất nước được đề ra từ Đại hội VI (1986) Đảng Cộng sản Việt Nam xác định khoa học và công nghệ là quốc sách hàng đầu vì lý do nào sau đây?', opts:['Bài học kinh nghiệm rút ra từ sự thành công của Liên Xô.','Trình độ khoa học - công nghệ của Việt Nam đã phát triển.','Xu thế chung của nhân loại là phát triển khoa học công nghệ.','Đảm bảo sự lãnh đạo tuyệt đối của Đảng Cộng sản Việt Nam.'], answer:2},
-  {id:'q14', text:'Nội dung nào sau đây phản ánh đúng thành tựu trong quá trình hội nhập quốc tế của Việt Nam hiện nay?', opts:['Tham gia vào nhiều tổ chức khu vực và quốc tế.','Được bầu là ủy viên thường trực Hội đồng Bảo an.','Được các nước G7 công nhận nền kinh tế thị trường.','Giữ gìn hoà bình ở tất cả các điểm nóng trên thế giới.'], answer:0},
-  {id:'q15', text:'Nội dung nào sau đây phản ánh không đúng hoạt động đối ngoại của Đảng Cộng sản Đông Dương trong những năm 1930-1945?', opts:['Tham gia vào các khối quân sự chống phát xít.','Củng cố quan hệ với Đảng Cộng sản Trung Quốc','Tổ chức nhiều hoạt động để ủng hộ Liên Xô.','Liên lạc với phong trào chống quân phiệt Nhật Bản.'], answer:0},
-  {id:'q16', text:'Trong những năm Chiến tranh thế giới thứ hai (1939-1945) hoạt động đối ngoại của Đảng Cộng sản Đông Dương đã đưa ra chủ trương nào sau đây?', opts:['Đứng về phía phe Đồng minh chống phát xít.','Liên minh quân sự với các quốc gia Đông Nam Á.','Triển khai các hoạt động giúp đỡ các nước bại trận.','Thành lập liên minh chống chiến tranh ở Đông Dương.'], answer:0},
-  {id:'q17', text:'Nội dung nào sau đây phản ánh điểm giống nhau trong hoạt động đối ngoại của Phan Bội Châu và Phan Châu Trinh (những năm đầu thế kỉ XX)?', opts:['Dựa vào thế lực bên ngoài để cứu nước.','Liên minh với các nước phương Tây.','Nhờ Nhật Bản để đánh đuổi quân Pháp.','Tham gia vào nhiều tổ chức quốc tế.'], answer:0},
-  {id:'q18', text:'Chủ tịch Hồ Chí Minh xuất thân trong một gia đình', opts:['nhà nho yêu nước.','công nhân tri thức.','nông dân cách mạng.','tri thức tư sản.'], answer:0},
-  {id:'q19', text:'Một trong những phẩm chất tốt đẹp của xứ Nghệ đã được Chủ tịch Hồ Chí Minh tiếp thu và thể hiện rõ nét trong cuộc đời hoạt động các mạng là', opts:['trọng nghĩa khinh tài.','giỏi nghề thủ công.','kinh nghiệm đi biển.','ý chí trong học tập.'], answer:3},
-  {id:'q20', text:'Năm 1919, Nguyễn Tất Thành tham gia vào tổ chức nào sau đây?', opts:['Đảng Xã hội Pháp.','Đảng Cộng sản Pháp.','Đảng Bảo thủ Anh.','Đảng Cộng hòa Mỹ.'], answer:0},
-  {id:'q21', text:'Nhận định nào sau đây là đúng về một trong những thời cơ Việt Nam có thể tận dụng khi gia nhập ASEAN để phát triển đất nước?', opts:['Tranh thủ vốn đầu tư và kĩ thuật từ những nước tiên tiến trong khu vực.','Dựa vào viện trợ kinh tế của tất cả các quốc gia thành viên để phát triển.','Đẩy mạnh hợp tác trên mọi lĩnh vực với tất cả các quốc gia trên thế giới.','Giao lưu và tiếp thu toàn bộ những nền văn hóa trong khu vực và thế giới.'], answer:0},
-  {id:'q22', text:'Bài học kinh nghiệm nào sau đây rút ra trong chiến dịch Biên giới được áp dụng trong kháng chiến chống Mỹ?', opts:['Kết hợp biện pháp đấu tranh quân sự, chính trị và ngoại giao.','Nghệ thuật tổ chức chiến dịch đánh địch trong công sự kiên cố.','Xây dựng lực lượng chính trị, vũ trang trong phạm vi chiến dịch.','Tấn công kẻ thù trên ba vùng chiến lược bằng ba mũi giáp công.'], answer:1},
-  {id:'q23', text:'Bài học kinh nghiệm rút ra từ những thắng lợi đối ngoại trong cuộc kháng chiến chống Pháp (1945-1954) được Đảng Cộng sản Việt Nam vận dụng như thế nào trong giai đoạn hiện nay?', opts:['Thực hiện phương châm thắng lợi từng bước.','Kiên định mục tiêu, sách lược cách mạng.','Tiến hành tổ chức các Đại hội quốc dân.','Liên kết chặt chẽ với Liên Xô, Trung Quốc.'], answer:0},
-  {id:'q24', text:'Nhận định nào sau đây là đúng về việc Việt Nam hai lần được bầu làm Ủy viên không thường trực Hội đồng Bảo an Liên hợp quốc (năm 2007 và 2019)?', opts:['Vị thế, uy tín của Việt Nam được nâng cao trên trường quốc tế.','Việt Nam đã trở thành một cường quốc chính trị ở Đông Nam Á.','Việt Nam đã giải quyết căn bản vấn đề tranh chấp trên Biển Đông.','Việt Nam có vai trò chi phối một số tổ chức quốc tế và khu vực.'], answer:0}
+/* ═══════ DATA ═══════ */
+const P1_DATA=[
+  {id:'q1',text:'Bộ luật nào sau đây được biên soạn dưới thời Lê Thánh Tông?',opts:['Hình thư.','Hình luật.','Hồng Đức.','Gia Long.'],answer:2},
+  {id:'q2',text:'Nội dung nào sau đây phản ánh đúng về vị trí chiến lược của Biển Đông đối với sự phát triển kinh tế của Việt Nam?',opts:['Là tuyến phòng thủ từ sớm, từ xa để Việt Nam bảo vệ tổ quốc.','Góp phần quyết định nhằm đảm bảo nguồn an ninh lương thực.','Là tuyến vận tải duy nhất để Việt Nam phát triển ngoại thương.','Là cửa ngõ để Việt Nam giao thương với khu vực và thế giới.'],answer:3},
+  {id:'q3',text:'Nội dung nào sau đây nằm trong những cải cách về chính trị - hành chính của Lê Thánh Tông?',opts:['Xóa bỏ chế độ tập quyền, tập trung quyền vào vua.','Chia cả nước thành 30 tỉnh và một phủ Thừa Thiên.','Thực thi chế độ quân điền, phát triển nông nghiệp.','Xóa bỏ các chức quan trung gian giữa vua và Bộ.'],answer:3},
+  {id:'q4',text:'Nội dung nào sau đây thể hiện tầm quan trọng chiến lược của quần đảo Trường Sa và Hoàng Sa đối với Việt Nam?',opts:['Thuận lợi xây dựng các hải cảng lớn.','Trạm trung chuyển hàng hóa quốc tế.','Án ngữ con đường hàng hải quốc tế.','Khống chế các căn cứ quân sự của Mĩ.'],answer:2},
+  {id:'q5',text:'Để thực hiện đúng vai trò duy trì hòa bình, an ninh thế giới được quy định trong Hiến chương, Liên hợp quốc đã có biện pháp nào sau đây?',opts:['Ra quyết định thông qua Tuyên ngôn Nhân quyền (1948).','Giải quyết hòa bình cuộc chiến tranh ở Việt Nam (1975).','Ngăn cản hành động xâm lược I-rắc của Anh, Mỹ (2003).','Xây dựng hiệp ước cấm phổ biến vũ khí hạt nhân (1968).'],answer:3},
+  {id:'q6',text:'Nội dung nào sau đây phản ánh đúng về trật tự thế giới được hình thành sau Chiến tranh lạnh?',opts:['Coi trọng vai trò của Liên Xô và Mĩ.','Đa cực, nhiều trung tâm quyền lực.','Bị Mỹ và các nước tư bản chi phối.','Phát triển theo hướng nhất thể hóa.'],answer:1},
+  {id:'q7',text:'Hiệp hội các quốc gia Đông Nam Á (ASEAN) được thành lập (1967) với mục đích nào sau đây?',opts:['Thúc đẩy hòa bình, ổn định ở khu vực.','Thiết lập một khối thịnh vượng chung.','Tiến hành nhất thể hóa toàn bộ khu vực.','Xóa bỏ sự cạnh tranh kinh tế lẫn nhau.'],answer:0},
+  {id:'q8',text:'Nội dung nào sau đây phản ánh đúng một trong những thách thức bên ngoài tác động đến Cộng đồng ASEAN?',opts:['Sự cạnh tranh chiến lược của các nước lớn, sự thay đổi cấu trúc địa - chính trị.','Sự đa dạng về chế độ chính trị, những mâu thuẫn trong quan hệ song phương.','Khoảng cách kinh tế, sự chênh lệch trình độ phát triển, sự cạnh tranh sản xuất.','Tình hình chính trị một số nước còn phức tạp, bất ổn định về chính trị - xã hội.'],answer:0},
+  {id:'q9',text:'Trước hành động gây chiến tranh của tập đoàn Pôn Pốt trên toàn tuyến biên giới Tây Nam (1978), Đảng và Nhà nước Việt Nam đã có chủ trương nào sau đây?',opts:['Mở cuộc phản công, làm tan rã quân chủ lực của đối phương.','Thực hiện vận động chính trị, kêu gọi đối phương ngừng bắn.','Phối hợp với lực lượng của Liên Xô, mở cuộc tổng công kích.','Mở cuộc vận động ngoại giao, đàm phán để kết thúc chiến tranh.'],answer:0},
+  {id:'q10',text:'Bước ngoặt trong cuộc kháng chiến chống Mỹ, cứu nước (1954-1975) của Việt Nam là',opts:['cuộc Tổng tiến công và nổi dậy Xuân 1968.','chiến dịch Điện Biên Phủ trên không (1972).','phong trào Đồng Khởi (1959-1960).','Hiệp định Pa-ri được kí kết (1973).'],answer:0},
+  {id:'q11',text:'Theo quyết định của Hội nghị Pốtxđam (1945), những lực lượng nào sau đây vào Đông Dương để giải giáp quân đội phát xít Nhật?',opts:['Quân Anh và quân Trung Hoa Dân quốc.','Quân Pháp và quân Trung Hoa Dân quốc.','Quân Mỹ và quân Trung Hoa Dân quốc.','Quân Anh, Pháp, Mỹ và quân Liên Xô.'],answer:0},
+  {id:'q12',text:'Nội dung nào sau đây phản ánh đúng âm mưu của quân Trung Hoa Dân quốc khi vào miền Bắc Việt Nam năm 1945?',opts:['Giải giáp quân đội phát xít Nhật.','Phá hoại cách mạng Việt Nam.','Tiêu diệt và hất cẳng quân Pháp.','Phối hợp với Mỹ để chống Nhật.'],answer:1},
+  {id:'q13',text:'Nội dung nào sau đây là một trong những hạn chế của công cuộc Đổi mới đất nước ở Việt Nam từ năm 1986 đến nay?',opts:['Tăng trưởng kinh tế chậm, thiếu tính bền vững.','Còn phải nhập khẩu lương thực từ bên ngoài.','Chưa tạo ra sự chuyển biến căn bản về kinh tế.','Tình trạng tham nhũng, hối lộ, lãng phí còn nhiều.'],answer:3},
+  {id:'q14',text:'Đảng Cộng sản Việt Nam phải tiếp tục hoàn thiện, bổ sung đường lối Đổi mới được đề ra từ Đại hội đại biểu Toàn quốc lần thứ VI (1986) vì lý do nào sau đây?',opts:['Để phù hợp với tình hình thực tế.','Do yêu cầu từ phía Trung Quốc.','Đường lối đổi mới còn sai lầm.','Nhân dân không ủng hộ đổi mới.'],answer:0},
+  {id:'q15',text:'Sự kiện nào sau đây đánh dấu thắng lợi to lớn trên trên mặt trận ngoại giao của Việt Nam trong cuộc kháng chiến chống Mĩ (1954-1975)?',opts:['Hiệp định Pa-ri được kí kết 1973.','Bình thường hóa quan hệ với Trung Quốc.','Tham gia vào tổ chức Liên hợp Quốc.','Gia nhập vào tổ chức ASEAN.'],answer:0},
+  {id:'q16',text:'Chủ trương nào sau đây là một trong những phương thức ngoại giao của Việt Nam vân dụng trong cuộc kháng chiến chống Mĩ (1954-1975)?',opts:['"Vừa tiến – vừa đàm".','"Vừa đánh, vừa đàm".','"Vừa tiến, vừa lùi".','"Vừa nhu, vừa cương".'],answer:1},
+  {id:'q17',text:'Chủ trương nào sau đây là phương châm đối ngoại được Đảng Cộng sản Đông Dương vận dụng để đối phó cùng một lúc nhiều kẻ thù sau Cách mạng tháng Tám 1945?',opts:['"Dĩ bất biến - ứng vạn biến".','"Đánh ăn chắc - tiến ăn chắc".','"Một bước lùi - ba bước tiến".','"Lùi một bước- tiến ba bước"'],answer:0},
+  {id:'q18',text:'Tháng 6-1925, Nguyễn Ái Quốc thành lập Hội Việt Nam Cách mạng Thanh niên khi đang hoạt động ở quốc gia nào sau đây?',opts:['Pháp.','Liên Xô.','Việt Nam.','Trung Quốc.'],answer:3},
+  {id:'q19',text:'Trong thời gian ở Pháp (1917-1923), Nguyễn Ái Quốc có hoạt động nào sau đây?',opts:['Tham gia sáng lập Hội Liên hiệp các dân tộc thuộc địa.','Tham dự Đại hội V của Quốc tế Cộng sản.','Soạn thảo Cương lĩnh chính trị đầu tiên của Đảng.','Chủ trì hội nghị hợp nhất các tổ chức cộng sản.'],answer:0},
+  {id:'q20',text:'Năm 1920, khi đang hoạt động ở Pháp, Nguyễn Ái Quốc đã có đóng góp nào sau đây đối với lịch sử dân tộc Việt Nam?',opts:['Tìm ra con đường cứu nước theo khuynh hướng vô sản.','Chủ trì hội nghị hợp nhất các tổ chức cộng sản.','Thành lập Hội Việt Nam cách mạng thanh niên.','Lãnh đạo cuộc khởi nghĩa vũ trang giành chính quyền.'],answer:0},
+  {id:'q21',text:'Nhận định nào sau đây là đúng về một trong những thời cơ cho các nước đang phát triển trong xu thế đa cực?',opts:['Khai thác triệt để các nguồn tài nguyên của đất nước.','Mở rộng hợp tác với tất cả các nước trên thế giới.','Tranh thủ các chính sách tích cực của các nước lớn.','Hạn chế được sự can thiệp của các nước vào nội bộ.'],answer:2},
+  {id:'q22',text:'Nhận định nào sau đây là đúng một trong những thách thức khi Việt Nam gia nhập tổ chức ASEAN?',opts:['Xuất phát điểm của Việt Nam thấp hơn so với các nước thành viên.','Chịu ảnh hưởng sâu sắc từ những nền văn hóa lớn trong khu vực.','Quốc phòng-an ninh chưa được đảm bảo do sự cạnh tranh gay gắt.','Phụ thuộc vào vốn đầu tư từ mọi quốc gia thành viên trong khu vực.'],answer:0},
+  {id:'q23',text:'Nội dung nào sau đây là bài học về hoạt động đối ngoại mang tính thời đại sâu sắc, được rút ra từ việc kí Hiệp định Giơ-ne-vơ (1954) kết thúc cuộc kháng chiến chống Pháp (1945-1954) ở Việt Nam?',opts:['Giải quyết bất đồng và xung đột quốc tế bằng biện pháp hòa bình.','Giải quyết tranh chấp, xung đột, bất đồng, bằng đối đầu trưc tiếp.','Giải quyết bất đồng, tranh chấp, xung đột bằng biện pháp vũ trang.','Liên minh quân sự tranh thủ sự giúp đỡ của các cường quốc lớn.'],answer:0},
+  {id:'q24',text:'Nhận định nào sau đây là đúng về những biện pháp nhằm đối phó với ngoại xâm và nội phản của Đảng Cộng sản Đông Dương, Chính phủ và Chủ tịch Hồ Chí Minh trong giai đoạn 1945 – 1946?',opts:['Đã hạn chế tối đa sự phá hoại của kẻ thù, giữ vững thành quả của cách mạng.','Góp phần ngăn chặn sự bùng nổ của chiến tranh, đem đến hòa bình vững chắc.','Đánh bại can thiệp của các đế quốc, hoàn thành sự nghiệp thống nhất đất nước.','Buộc các nước đế quốc phải công nhận các quyền dân tộc cơ bản của Việt Nam.'],answer:0}
 ];
 
-const P2_DATA = [
+const P2_DATA=[
   {
     id:'p2q1',
     intro:'Cho những thông tin trong bảng sau đây:',
     table:[
-      {time:'1967', act:'Tuyên bố ASEAN (Tuyên bố Băng Cốc) ký tại Băng-cốc, Thái Lan ngày 08/8/1967.'},
-      {time:'1971', act:'Tuyên bố về Khu vực Hòa bình, Tự do và Trung lập (ZOPFAN) được thông qua tại Cua-la-lăm-pơ, Ma-lai-xi-a ngày 27/11/1971.'},
-      {time:'1976', act:'- Tuyên bố Hòa hợp ASEAN được thông qua tại Hội nghị cấp cao ASEAN lần thứ nhất tại Ba-li, In-đô-nê-xi-a ngày 24/2/1976.'},
-      {time:'1997', act:'- Tầm nhìn ASEAN 2020 được thông qua tại Hội nghị Cấp cao ASEAN không chính thức lần thứ hai tại Ma-lai-xi-a tháng 12/1997.'},
-      {time:'2002', act:'- Tuyên bố về Ứng xử của các Bên ở Biển Đông (DOC) được các nước ASEAN ký với Trung Quốc tại Hội nghị Cấp cao ASEAN – Trung Quốc lần thứ 6 tại Cam-pu-chia ngày 04/11/2002.'}
+      {time:'1976',act:'- Hiệp ước Thân thiện và Hợp tác ở Đông Nam Á Ký tại Hội nghị Thượng đỉnh ASEAN lần thứ nhất tại Ba-li, In-đô-nê-xi-a, ngày 24/02/1976'},
+      {time:'1992',act:'Hiệp định về Chương trình Ưu đãi Thuế quan có hiệu lực chung cho Khu vực Thương mại Tự do ASEAN được ký tại Xinh-ga-po năm 1992.'},
+      {time:'1995',act:'Hiệp ước về Khu vực Đông Nam Á không vũ khí hạt nhân được ký tại Băng-cốc ngày 15/12/1995.'},
+      {time:'1997',act:'Tầm nhìn ASEAN 2020 được thông qua tại Hội nghị Cấp cao ASEAN không chính thức lần thứ hai tại Ma-lai-xi-a tháng 12/1997.'}
     ],
     subs:[
-      {label:'a', text:'Tư liệu đề cập đến một số hoạt động nội khối và đối ngoại của tổ chức ASEAN từ khi thành lập đến đầu thế kỷ XXI.', answer:true},
-      {label:'b', text:'Tuyên bố ASEAN đã đánh dấu quá trình phát triển và hợp tác chặt chẽ giữa các quốc gia thành viên ASEAN.', answer:false},
-      {label:'c', text:'Tuyên bố về ứng xử của các bên ở biển Đông đã giải quyết triệt để tranh chấp chủ quyền của các nước ở biển Đông.', answer:false},
-      {label:'d', text:'Những hoạt động của ASEAN đã góp phần đảm bảo hòa bình, ổn định và hợp tác ở khu vực và trên thế giới.', answer:true}
+      {label:'a',text:'Hiệp ước Thân thiện và Hợp tác đã đánh dấu sự phát triển của ASEAN từ tổ chức non yếu thành tổ chức hợp tác hiệu quả, chặt chẽ.',answer:true},
+      {label:'b',text:'Hiệp định về Chương trình Ưu đãi thuế quan đã tạo ra thị trường chung hùng mạnh cho các nước trong tổ chức ASEAN.',answer:false},
+      {label:'c',text:'Trong Tầm nhìn ASEAN 2020, các nước ASEAN đã khẳng định về một tổ chức khu vực không có vũ khí hạt nhân.',answer:true},
+      {label:'d',text:'Với những hoạt động tích cực của mình, ASEAN được đánh giá là tổ chức khu vực thành công thứ hai trên thế giới.',answer:true}
     ]
   },
   {
     id:'p2q2',
     intro:'Cho đoạn tư liệu sau đây:',
-    quote:`"Tôi tuyệt nhiên không ham muốn công danh phú quý chút nào. Bây giờ phải gánh chức Chủ tịch là vì đồng bào uỷ thác thì tôi phải gắng sức làm, như một người lính vâng mệnh lệnh của quốc dân ra trước mặt trận. Bao giờ đồng bào cho tôi lui, thì tôi rất vui lòng lui. Tôi chỉ có một sự ham muốn, ham muốn tột bậc, là làm sao cho nước ta được hoàn toàn độc lập, dân ta được hoàn toàn tự do, đồng bào ai cũng có cơm ăn áo mặc, ai cũng được học hành".`,
-    source:'Hồ Chí Minh, Toàn tập, Tập 4, NXB Chính trị quốc gia Sự thật, Hà Nội, 2011, tr.187)',
+    quote:`"Dù khó khăn gian khổ đến mấy, nhân dân ta nhất định sẽ hoàn toàn thắng lợi. Đế quốc Mỹ nhất định phải cút khỏi nước ta. Tổ quốc ta nhất định sẽ thống nhất. Đồng bào Nam Bắc nhất định sẽ sum họp một nhà. Nước ta sẽ có vinh dự lớn là một nước nhỏ mà đã anh dũng đánh thắng hai đế quốc to – là Pháp và Mỹ; và đã góp phần xứng đáng vào phong trào giải phóng dân tộc".`,
+    source:'(Di chúc của Chủ tịch Hồ Chí Minh, trích trong Hồ Chí Minh toàn tập, tập 15, Nxb Chính trị quốc gia, Hà Nội, 2011, tr.623)',
     subs:[
-      {label:'a', text:'Tư liệu trích dẫn từ Tuyên ngôn Độc lập của Chủ tịch Hồ Chí Minh ngay sau ngày cách mạng tháng Tám thành công.', answer:false},
-      {label:'b', text:'Tư liệu khẳng định mục tiêu cuối cùng và lớn nhất trong cuộc đời hoạt động cách mạng của Chủ tịch Hồ Chí Minh.', answer:true},
-      {label:'c', text:'Chủ tịch Hồ Chí Minh đã lãnh đạo nhân dân Việt Nam kháng chiến và xây dựng thành công chủ nghĩa xã hội.', answer:false},
-      {label:'d', text:'"Ham muốn tột bậc" của Chủ tịch Hồ Chí Minh thể hiện hai nhiệm vụ chiến lược quan trọng của cách mạng Việt Nam.', answer:true}
+      {label:'a',text:'Tư liệu đề cập đến ý nghĩa thắng lợi của cuộc kháng chiến chống Mỹ cứu nước của nhân dân Việt Nam.',answer:false},
+      {label:'b',text:'Mục tiêu thống nhất đất nước trong tư liệu trên được đặt ra từ sau thắng lợi của cuộc kháng chiến chống Pháp.',answer:true},
+      {label:'c',text:'Trong tư liệu, Chủ tịch Hồ Chí Minh chỉ rõ, kẻ thù chủ yếu của nhân dân Việt Nam thời điểm đó là Pháp, Mỹ.',answer:false},
+      {label:'d',text:'Cuộc kháng chiến của nhân dân Việt Nam đã góp phần xứng đáng vào phong trào cách mạng thế giới.',answer:true}
     ]
   },
   {
     id:'p2q3',
     intro:'Cho đoạn tư liệu sau đây:',
-    quote:`"Tích cực tranh thủ điều kiện quốc tế thuận lợi để nhanh chóng xây dựng cơ sở vật chất kĩ thuật của chủ nghĩa xã hội đồng thời củng cố quốc phòng an ninh, phát huy tác dụng của Đảng và Nhà nước trong công cuộc đấu tranh chung của nhân dân thế giới vì hoà bình, độc lập dân tộc và chủ nghĩa xã hội. Tăng cường đoàn kết với Lào, Campuchia, thực hiện hợp tác lâu dài, giúp đỡ lẫn nhau, làm cho ba nước Đông Dương trở thành lực lượng vững chắc của cách mạng và hoà bình ở Đông Nam Á. Củng cố và tăng cường quan hệ hợp tác xã hội chủ nghĩa giữa Việt Nam và các nước xã hội chủ nghĩa anh em. Xây dựng quan hệ hữu nghị giữa nước ta và các nước trong thế giới thứ ba, cùng các nước khác trên cơ sở năm nguyên tắc chung sống hoà bình".`,
-    source:'Nghị quyết lần thứ 24 ngày 29/9/1975 của Ban Chấp hành Trung ương Đảng',
+    quote:`"Trong thời kỳ đổi mới, việc mở rộng quan hệ với tất cả các nước theo phương châm Việt Nam muốn là bạn và đối tác tin cậy của tất cả các nước trong cộng đồng thế giới, phấn đấu vì hòa bình độc lập và phát triển, đã đem lại cho Việt Nam các quan hệ quốc tế đa dạng và đa phương chưa từng có trong lịch sử ngoại giao đất nước. Chưa bao giờ sự giao lưu giữa Việt Nam với các nước ở khắp các châu lục ở tất cả các cấp ở trên nhiều lĩnh vực lại diễn ra năng động như trong những năm 1990. Việt Nam đã tham gia tích cực vào việc giải quyết nhiều vấn đề khu vực và quốc tế, vào việc xử lý các vấn đề bức xúc mang tính toàn cầu…"`,
+    source:'(Trích "Ngoại giao Việt Nam 1945-2000", Nguyễn Đình Bin (Chủ biên), NXB Chính trị Quốc gia, Hà Nội 2001, Tr382)',
     subs:[
-      {label:'a', text:'Tư liệu đề cập đến những nét lớn về chính sách đối ngoại của Việt Nam sau cuộc kháng chiến chống Mỹ.', answer:true},
-      {label:'b', text:'Sau năm 1975, đường lối đối ngoại của Việt Nam chủ yếu phục vụ mục tiêu công nghiệp hóa, hiện đại hóa.', answer:false},
-      {label:'c', text:'Cơ sở của đường lối đối ngoại Việt Nam sau năm 1975 là hòa bình, độc lập, tự chủ, coi trọng đối tác truyền thống.', answer:true},
-      {label:'d', text:'Đường lối đối ngoại của Việt Nam sau năm 1975 đã đặt nền móng cho công cuộc đổi mới đất nước từ năm 1986.', answer:false}
+      {label:'a',text:'Tư liệu khẳng định những điểm tích cực của ngoại giao Việt Nam thời kỳ đầu của công cuộc Đổi mới đất nước.',answer:true},
+      {label:'b',text:'Quan hệ đa dạng và đa phương của Việt Nam sau năm 1990 là do Việt Nam đã gia nhập tổ chức Liên hợp quốc.',answer:false},
+      {label:'c',text:'Việt Nam có vai trò trung tâm trong việc giải quyết các vấn đề khu vực và quốc tế, các vấn đề mang tính toàn cầu.',answer:false},
+      {label:'d',text:'Việc mở rộng quan hệ đối ngoại đã tạo điều kiện thuận lợi để Việt Nam đẩy mạnh công cuộc Đổi mới đất nước.',answer:true}
     ]
   },
   {
     id:'p2q4',
     intro:'Cho đoạn tư liệu sau đây:',
-    quote:`"Năm tháng sẽ trôi qua, nhưng thắng lợi của nhân dân ta trong sự nghiệp kháng chiến chống Mỹ, cứu nước mãi mãi được ghi vào lịch sử dân tộc ta như một trong những trang chói lọi nhất, một biểu tượng sáng ngời về sự toàn thắng của chủ nghĩa anh hùng cách mạng và trí tuệ con người, và đi vào lịch sử thế giới như một chiến công vĩ đại của thế kỉ XX, một sự kiện có tầm quan trọng quốc tế to lớn và có thời đại sâu sắc".`,
-    source:'(Đảng Cộng sản Việt Nam, Báo cáo chính trị của Ban Chấp hành Trung ương tại Đại hội đại biểu toàn quốc lần thứ VI, trích trong: Văn kiện Đảng, Toàn tập, Tập 37, NXB Chính trị quốc gia, Hà Nội, 2004, tr.457).',
+    quote:`"… Con đường phát triển cơ bản của cách mạng Việt Nam ở miền Nam là khởi nghĩa giành chính quyền về tay nhân dân, … Con đường đó là lấy sức mạnh của quần chúng, dựa vào lực lượng chính trị của quần chúng là chủ yếu, kết hợp với lực lượng vũ trang để đánh đổ chính quyền thống trị của đế quốc và phong kiến, dựng lên chính quyền cách mạng của nhân dân".`,
+    source:'Văn kiện Đảng, Toàn tập, Tập 20, NXB Chinh trị quốc gia, Hà Nội, 2002, tr.82)',
     subs:[
-      {label:'a', text:'Tư liệu khẳng định những ý nghĩa từ thắng lợi của cuộc kháng chiến chống Mỹ cứu nước của nhân dân Việt Nam.', answer:true},
-      {label:'b', text:'Cuộc kháng chiến chống Mỹ của Việt Nam thắng lợi đã chấm dứt sự tồn tại của chủ nghĩa thực dân mới trên thế giới.', answer:false},
-      {label:'c', text:'"Tính thời đại sâu sắc" nêu trong tư liệu là cuộc đấu tranh quyết liệt nhất giữa hai thế lực cách mạng và phản cách mạng.', answer:true},
-      {label:'d', text:'Với thắng lợi của kháng chiến chống Mỹ, Việt Nam đã hoàn thành cơ bản những mục tiêu của cách mạng xã hội chủ nghĩa.', answer:false}
+      {label:'a',text:'Tư liệu khẳng định con đường phát triển cơ bản của cách mạng miền Nam Việt Nam trong kháng chiến chống Mỹ.',answer:true},
+      {label:'b',text:'Trong kháng chiến chống Mỹ, bạo lực cách mạng lấy chính trị làm chủ yếu là con đường phát triển xuyên suốt.',answer:false},
+      {label:'c',text:'Cơ sở của bạo lực cách mạng trong kháng chiến chống Mỹ là sự kết hợp hai lực lượng, trong đó vũ trang là nòng cốt.',answer:true},
+      {label:'d',text:'Trong kháng chiến chống Mỹ, khởi nghĩa là hình thức chủ yếu để đấu tranh, nhằm đánh đuổi đế quốc và tay sai.',answer:false}
     ]
   }
 ];
 
-/* ══════════════════════════════════════
-   STATE
-══════════════════════════════════════ */
-let p1q=[], p2q=[], ans1={}, ans2={}, timer=null, secs=2700, done=false;
+/* ═══════ STATE ═══════ */
+let p1q=[],p2q=[],ans1={},ans2={},tmr=null,secs=2700,done=false;
 
-/* ══════════════════════════════════════
-   HELPERS
-══════════════════════════════════════ */
+/* ═══════ HELPERS ═══════ */
 const $=id=>document.getElementById(id);
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
-function fmt(s){return `${String(0|s/60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`}
+function fmt(s){return`${String(0|s/60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`}
+function mk(tag,cls='',props={}){const e=document.createElement(tag);if(cls)e.className=cls;return Object.assign(e,props)}
 
-/* ══════════════════════════════════════
-   BUILD DATA
-══════════════════════════════════════ */
-function buildP1(){
-  return shuffle(P1_DATA).map(q=>{
-    const si=shuffle([0,1,2,3]);
-    return{...q,opts:si.map(i=>q.opts[i]),answer:si.indexOf(q.answer)};
-  });
-}
+/* ═══════ BUILD ═══════ */
+function buildP1(){return shuffle(P1_DATA).map(q=>{const si=shuffle([0,1,2,3]);return{...q,opts:si.map(i=>q.opts[i]),answer:si.indexOf(q.answer)}})}
 function buildP2(){return shuffle(P2_DATA)}
 
-/* ══════════════════════════════════════
-   RENDER P1
-══════════════════════════════════════ */
+/* ═══════ RENDER P1 ═══════ */
 function renderP1(){
   const c=$('p1');c.innerHTML='';
   const L=['A','B','C','D'];
@@ -399,20 +308,14 @@ function renderP1(){
   });
 }
 
-/* ══════════════════════════════════════
-   RENDER P2
-══════════════════════════════════════ */
+/* ═══════ RENDER P2 ═══════ */
 function renderP2(){
   const c=$('p2');c.innerHTML='';
   p2q.forEach((q,qi)=>{
     const card=mk('div','q-card',{id:'c2-'+q.id});
-    const num=mk('div','q-num');num.textContent=`Câu ${qi+1} / 4 (Phần II)`;
-    card.appendChild(num);
-
+    card.appendChild(Object.assign(mk('div','q-num'),{textContent:`Câu ${qi+1} / 4 (Phần II)`}));
     const qt=mk('div','q-text');
     qt.appendChild(Object.assign(mk('span'),{textContent:q.intro}));
-
-    // table
     if(q.table){
       const tbl=mk('table');
       tbl.style.cssText='width:100%;border-collapse:collapse;margin:10px 0 8px;font-size:.88rem';
@@ -426,10 +329,8 @@ function renderP2(){
       tbl.appendChild(tb);qt.appendChild(tbl);
     }
     if(q.quote){const bq=mk('blockquote');bq.textContent=q.quote;qt.appendChild(bq)}
-    if(q.source){const s=mk('span','source-note');s.textContent=q.source;qt.appendChild(s)}
+    if(q.source){qt.appendChild(Object.assign(mk('span','source-note'),{textContent:q.source}))}
     card.appendChild(qt);
-
-    // tf table
     const tbl2=mk('table','tf-table');
     tbl2.innerHTML='<thead><tr><th style="width:36px">Ý</th><th>Nội dung</th><th style="width:174px">Chọn đáp án</th></tr></thead>';
     const tb2=mk('tbody');
@@ -438,25 +339,18 @@ function renderP2(){
       const tr=mk('tr');
       const tl=mk('td');tl.style.cssText='text-align:center;font-weight:700;font-family:Playfair Display,serif';tl.textContent=sub.label+')';
       const tt=mk('td');tt.textContent=sub.text;
-      const tb=mk('td');tb.style.textAlign='center';
+      const td=mk('td');td.style.textAlign='center';
       const bT=mk('button','tf-btn',{id:`tf-${key}-T`,textContent:'✔ Đúng'});
       const bF=mk('button','tf-btn',{id:`tf-${key}-F`,textContent:'✘ Sai'});
       bT.onclick=()=>selTF(key,true,q.id);
       bF.onclick=()=>selTF(key,false,q.id);
       const g=mk('div','tf-radio-group');g.appendChild(bT);g.appendChild(bF);
-      tb.appendChild(g);tr.append(tl,tt,tb);tb2.appendChild(tr);
+      td.appendChild(g);tr.append(tl,tt,td);tb2.appendChild(tr);
     });
     tbl2.appendChild(tb2);card.appendChild(tbl2);
     card.appendChild(mk('div','review-mark',{id:'rm2-'+q.id}));
     c.appendChild(card);
   });
-}
-
-function mk(tag,cls,props={}){
-  const el=document.createElement(tag);
-  if(cls)el.className=cls;
-  Object.assign(el,props);
-  return el;
 }
 
 function selTF(key,val,qId){
@@ -466,45 +360,34 @@ function selTF(key,val,qId){
   F.className='tf-btn'+(val===false?' sel-f':'');
   upProg();
   const q=p2q.find(x=>x.id===qId);
-  if(q&&q.subs.every(s=>ans2[qId+'-'+s.label]!==undefined))
-    $('c2-'+qId)?.classList.add('answered');
+  if(q&&q.subs.every(s=>ans2[qId+'-'+s.label]!==undefined))$('c2-'+qId)?.classList.add('answered');
 }
 
-/* ══════════════════════════════════════
-   PROGRESS + TIMER
-══════════════════════════════════════ */
+/* ═══════ TIMER + PROGRESS ═══════ */
 function upProg(){
   const d=Object.keys(ans1).length+Object.keys(ans2).length;
   $('progress-text').textContent=`${d} / 40 ý đã làm`;
 }
 function startTimer(){
   secs=2700;
-  timer=setInterval(()=>{
-    secs--;
-    $('timer-display').textContent=fmt(secs);
+  tmr=setInterval(()=>{
+    secs--;$('timer-display').textContent=fmt(secs);
     if(secs<=300)$('timer-display').classList.add('urgent');
-    if(secs<=0){clearInterval(timer);if(!done)autoSub()}
+    if(secs<=0){clearInterval(tmr);if(!done)autoSub()}
   },1000);
 }
 function autoSub(){
-  done=true;
-  $('submit-btn').disabled=true;
+  done=true;$('submit-btn').disabled=true;
   document.querySelectorAll('input[type=radio]').forEach(i=>i.disabled=true);
-  const{s1,s2,d2}=calcScore();
-  applyReview(s1,s2,d2);
-  fillResult(s1,s2,d2);
-  showModal('modal-result');
+  const{s1,s2,d2}=calcScore();applyReview(s1,s2,d2);fillResult(s1,s2,d2);showModal('modal-result');
 }
 
-/* ══════════════════════════════════════
-   CONFIRM MODAL
-══════════════════════════════════════ */
+/* ═══════ MODAL ═══════ */
 function openConfirm(){
   if(done)return;
   const d1=Object.keys(ans1).length,d2=Object.keys(ans2).length,empty=(24-d1)+(16-d2);
   $('sv1').textContent=`${d1}/24`;$('sv2').textContent=`${d2}/16`;
-  $('sv-time').textContent=fmt(secs);
-  $('sv-empty').textContent=empty;
+  $('sv-time').textContent=fmt(secs);$('sv-empty').textContent=empty;
   $('sb-empty').className='stat-box'+(empty>0?' warn':'');
   const wb=$('warnbox');
   if(empty>0){$('warn-n').textContent=empty+' ý';wb.classList.add('show')}else wb.classList.remove('show');
@@ -512,7 +395,6 @@ function openConfirm(){
 }
 function closeModal(){
   $('modal-overlay').classList.remove('show');
-  ['modal-confirm','modal-result'].forEach(id=>$('pop')&&$(id).classList.remove('pop'));
   $('modal-confirm').classList.remove('pop');
   $('modal-result').classList.remove('pop');
 }
@@ -523,36 +405,23 @@ function showModal(id){
   setTimeout(()=>$(id).classList.add('pop'),20);
 }
 function doSubmit(){
-  if(done)return;done=true;
-  clearInterval(timer);
+  if(done)return;done=true;clearInterval(tmr);
   $('submit-btn').disabled=true;
   document.querySelectorAll('input[type=radio]').forEach(i=>i.disabled=true);
   $('modal-confirm').classList.remove('pop');
-  setTimeout(()=>{
-    const{s1,s2,d2}=calcScore();
-    applyReview(s1,s2,d2);
-    fillResult(s1,s2,d2);
-    showModal('modal-result');
-  },260);
+  setTimeout(()=>{const{s1,s2,d2}=calcScore();applyReview(s1,s2,d2);fillResult(s1,s2,d2);showModal('modal-result')},260);
 }
-function seeReview(){closeModal()}
 function redoQuiz(){
-  done=false;ans1={};ans2={};
-  clearInterval(timer);closeModal();
+  done=false;ans1={};ans2={};clearInterval(tmr);closeModal();
   $('submit-btn').disabled=false;
-  $('timer-display').classList.remove('urgent');
-  $('timer-display').style.color='';
-  p1q=buildP1();p2q=buildP2();
-  renderP1();renderP2();upProg();startTimer();
+  $('timer-display').classList.remove('urgent');$('timer-display').style.color='';
+  p1q=buildP1();p2q=buildP2();renderP1();renderP2();upProg();startTimer();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-/* ══════════════════════════════════════
-   SCORE
-══════════════════════════════════════ */
+/* ═══════ SCORE + REVIEW ═══════ */
 function calcScore(){
-  let s1=0;
-  p1q.forEach(q=>{if(ans1[q.id]===q.answer)s1+=.25});
+  let s1=0;p1q.forEach(q=>{if(ans1[q.id]===q.answer)s1+=.25});
   let s2=0;const d2={};
   p2q.forEach(q=>{
     let c=0;q.subs.forEach(s=>{if(ans2[q.id+'-'+s.label]===s.answer)c++});
@@ -560,10 +429,6 @@ function calcScore(){
   });
   return{s1,s2,d2};
 }
-
-/* ══════════════════════════════════════
-   REVIEW
-══════════════════════════════════════ */
 function applyReview(s1,s2,d2){
   const L=['A','B','C','D'];
   p1q.forEach(q=>{
@@ -574,10 +439,10 @@ function applyReview(s1,s2,d2){
       if(oi===q.answer)l.classList.add('correct');
       else if(oi===ua&&ua!==q.answer)l.classList.add('wrong');
     });
-    const mk=$('rm1-'+q.id);if(!mk)return;
-    if(ua===q.answer){mk.className='review-mark ok';mk.textContent=`✔ Đúng — Đáp án: ${L[q.answer]}`}
-    else if(ua===undefined){mk.className='review-mark no';mk.textContent=`⚠ Chưa trả lời — Đáp án đúng: ${L[q.answer]}`}
-    else{mk.className='review-mark no';mk.textContent=`✘ Sai — Bạn chọn: ${L[ua]} | Đáp án đúng: ${L[q.answer]}`}
+    const rm=$('rm1-'+q.id);if(!rm)return;
+    if(ua===q.answer){rm.className='review-mark ok';rm.textContent=`✔ Đúng — Đáp án: ${L[q.answer]}`}
+    else if(ua===undefined){rm.className='review-mark no';rm.textContent=`⚠ Chưa trả lời — Đáp án đúng: ${L[q.answer]}`}
+    else{rm.className='review-mark no';rm.textContent=`✘ Sai — Bạn chọn: ${L[ua]} | Đáp án đúng: ${L[q.answer]}`}
   });
   p2q.forEach(q=>{
     const c=d2[q.id];
@@ -595,7 +460,6 @@ function applyReview(s1,s2,d2){
     else{rm.className='review-mark pt';rm.textContent=`◑ Đúng ${c}/4 ý — +${qs.toFixed(2)} điểm`}
   });
 }
-
 function fillResult(s1,s2,d2){
   const tot=+(s1+s2).toFixed(2);
   $('rscore').textContent=tot.toFixed(2);
@@ -610,28 +474,20 @@ function fillResult(s1,s2,d2){
     <tr><td><strong>Tổng cộng</strong></td><td><strong>${tot.toFixed(2)} đ</strong></td><td><strong>10.00 đ</strong></td></tr>`;
   if(tot>=6.5)confetti();
 }
-
-/* ══════════════════════════════════════
-   CONFETTI
-══════════════════════════════════════ */
 function confetti(){
   const cols=['#d4a017','#c0392b','#27ae60','#2980b9','#f39c12','#8e44ad','#e67e22'];
   for(let i=0;i<65;i++){
     const e=document.createElement('div');e.className='cf';
     const sz=6+Math.random()*9;
     e.style.cssText=`left:${Math.random()*100}vw;top:-20px;width:${sz}px;height:${sz}px;background:${cols[0|Math.random()*cols.length]};border-radius:${Math.random()>.5?'50%':'2px'};animation-delay:${Math.random()*1.3}s;animation-duration:${1.8+Math.random()*.9}s`;
-    document.body.appendChild(e);
-    setTimeout(()=>e.remove(),3600);
+    document.body.appendChild(e);setTimeout(()=>e.remove(),3600);
   }
 }
 
-/* ══════════════════════════════════════
-   INIT
-══════════════════════════════════════ */
+/* ═══════ INIT ═══════ */
 window.addEventListener('DOMContentLoaded',()=>{
-  p1q=buildP1();p2q=buildP2();
-  renderP1();renderP2();upProg();startTimer();
+  p1q=buildP1();p2q=buildP2();renderP1();renderP2();upProg();startTimer();
 });
 </script>
 </body>
-        </html>
+  </html>
